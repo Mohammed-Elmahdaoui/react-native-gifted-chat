@@ -47,6 +47,7 @@ function MessageContainer<TMessage extends IMessage = IMessage> (props: MessageC
     scrollToBottomStyle,
     infiniteScroll = false,
     isLoadingEarlier = false,
+    renderDay,
     renderTypingIndicator: renderTypingIndicatorProp,
     renderFooter: renderFooterProp,
     renderLoadEarlier: renderLoadEarlierProp,
@@ -377,6 +378,7 @@ function MessageContainer<TMessage extends IMessage = IMessage> (props: MessageC
         : null}
       <DayAnimated
         scrolledY={scrolledY}
+        renderDay={renderDay}
         daysPositions={daysPositions}
         listHeight={listHeight}
         messages={messages}
